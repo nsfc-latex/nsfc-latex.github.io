@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>国家自然科学基金申请书 LaTeX 模板</title>
+    <meta name="description" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta name="keywords" content="国自然, 国家自然科学基金 LaTeX 模板,优青,海外优青,模板" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+
+    <!-- OpenGraph / Twitter -->
+    <meta property="og:title" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:description" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta property="og:url" content="https://nsfc-latex.github.io/" />
+    <meta property="og:site_name" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="国家自然科学基金申请书 LaTeX 模板" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QP4ZJYDME9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QP4ZJYDME9');
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "description": "国家自然科学基金申请书 LaTeX 模板",
+        "headline": "国家自然科学基金申请书 LaTeX 模板",
+        "name": "国家自然科学基金申请书 LaTeX 模板",
+        "url": "https://nsfc-latex.github.io/"
+      }
+    </script>
+
+    <!-- TailwindCSS (CDN for lightweight single-page) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f4fff0",
+                100: "#e8ffdc",
+                200: "#c9ffb2",
+                300: "#9fff7a",
+                400: "#77B254",
+                500: "#4f9a2a",
+                600: "#3b7a1f",
+                700: "#2f5f1a",
+                800: "#274c18",
+                900: "#213f16"
+              }
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- Optional: Tailwind Typography for nice article styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.16/dist/typography.min.css"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="google-adsense-account" content="ca-pub-3120757781451274" />
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3120757781451274"
+      crossorigin="anonymous"
+    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSFVE59S05"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SSFVE59S05");
+    </script>
+  </head>
+
+  <body class="bg-white text-slate-900">
+    <!-- Header / Nav (fixed) -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+        <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-400/15 text-brand-600">
+            La
+          </span>
+          <span class="hidden sm:inline">项目申报资源</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-5 text-sm">
+            <li><a class="hover:opacity-60 transition" href="#latex-template">LaTeX 模板</a></li>
+            <li><a class="hover:opacity-60 transition" href="#guide">使用说明</a></li>
+            <li><a class="hover:opacity-60 transition" href="#related">相关材料</a></li>
+            <li><a class="hover:opacity-60 transition" href="/resources">资源库</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuBtn"
+          class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          菜单
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <nav class="mx-auto max-w-5xl px-4 py-3">
+          <ul class="flex items-center gap-5 text-sm">
+            <li><a class="hover:opacity-60 transition" href="/">LaTeX 模板</a></li>
+            <li><a class="hover:opacity-60 transition" href="#guide">使用说明</a></li>
+            <li><a class="hover:opacity-60 transition" href="#related">相关材料</a></li>
+            <li><a class="hover:opacity-60 transition" href="/resources">资源库</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="mx-auto max-w-5xl px-4 pt-24 pb-10">
+      <section class="prose prose-slate prose-lg max-w-none">
+
+        <h1 class="my-20 text-center text-5xl font-chinese-serif">
+            资源库：中标标书、人才类答辩 PPT
+        </h1>
+
+        <h2 id="examples" class="mt-10">中标申请书案例</h2>
+
+        <div class="not-prose rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-6">
+          <p class="text-slate-800 leading-relaxed">
+            有偿提供多份 <b class="text-orange-600">信息学部</b>
+            国自然青年/面上以及人才类（<span style="color: #4F46E5;">长江</span>/<span style="color: #06B6D4;">青年长江</span>/<span style="color: #10B981;">优青</span>/<span style="color: #F59E0B;">海外优青</span>/<span style="color: #EF4444;">杰青</span>）项目中标申请书样本（PDF），包含国自然青年、面上等多类项目。
+            标书的收集与整理需耗费大量时间与精力，恕不免费提供。付款后，标书将打包发送至您付款时提供的邮箱。
+          </p>
+          <p class="mt-3 text-center text-orange-600">付款后将发送<span class="text-2xl text-red-600 font-bold">谷歌云盘</span>下载链接，无法访问谷歌的请勿购买！</p>
+
+          <p class="mt-3 text-center text-red-600">文档发送后恕不退款，请确认后再付款。</p>
+        </div>
+
+        <div class="mt-20 text-lg">
+            <p class="font-bold">资源列表</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><a href="#xinxixue-qn-ms">信息学部国自然青年/面上项目中标标书</a></li>
+                <li><a href="#xinxixue-rencai">信息学部国自然人才类（<span style="color: #4F46E5;">长江</span>/<span style="color: #06B6D4;">青年长江</span>/<span style="color: #10B981;">优青</span>/<span style="color: #F59E0B;">海外优青</span>/<span style="color: #EF4444;">杰青</span>）中标标书</a></li>
+                <li><a href="#ai-guojiaji">人工智能相关国家级项目材料（申报书、答辩PPT）</a></li>
+                <li><a href="#siqing-dabian">四青人才答辩材料</a></li>
+            </ul>
+        </div>
+
+        <div class="product">
+            <h2 class="mt-20 text-4xl" id="xinxixue-qn-ms">
+            <span class="text-orange-600">信息学部</span>国自然青年/面上项目中标标书
+            </h2>
+
+            <!-- Proposal image grid -->
+            <div class="not-prose mt-4">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <img
+                src="/assets/images/proposals/2022long-tail.png"
+                class="proposal-image rounded-xl border border-slate-200 shadow-sm cursor-pointer hover:opacity-90 transition"
+                alt="Proposal 1"
+                loading="lazy"
+                />
+                <img
+                src="/assets/images/proposals/ai-security2022.png"
+                class="proposal-image rounded-xl border border-slate-200 shadow-sm cursor-pointer hover:opacity-90 transition"
+                alt="Proposal 2"
+                loading="lazy"
+                />
+                <img
+                src="/assets/images/proposals/ai2022.png"
+                class="proposal-image rounded-xl border border-slate-200 shadow-sm cursor-pointer hover:opacity-90 transition"
+                alt="Proposal 3"
+                loading="lazy"
+                />
+            </div>
+
+            <!-- Modal (desktop only) -->
+            <div
+                id="imageModal"
+                class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 p-4"
+                aria-hidden="true"
+            >
+                <div class="relative max-w-5xl w-full">
+                <button
+                    id="closeModal"
+                    class="absolute -top-10 right-0 text-white text-2xl hover:opacity-70"
+                    aria-label="Close"
+                >
+                    &times;
+                </button>
+                <img id="modalImage" class="mx-auto max-h-[85vh] w-auto rounded-xl" src="" alt="Enlarged proposal" />
+                </div>
+            </div>
+            </div>
+
+            <figure class="not-prose mt-8">
+            <div class="mx-auto max-w-[560px]">
+                <img src="/assets/images/proposals.png" alt="proposals" class="w-full h-auto" loading="lazy" />
+                <figcaption class="mt-2 text-center text-sm text-slate-500">
+                    国自然青年/面上项目申请书。请点击下方按钮购买。
+                </figcaption>
+            </div>
+            </figure>
+
+            <!-- Stripe buy button (as-is) -->
+            <div class="not-prose mt-4 flex justify-center">
+            <div style="width: 288px; margin: 1em auto">
+                <stripe-buy-button
+                buy-button-id="buy_btn_1QqKguCGNdcuWR3WARdkOZ3x"
+                publishable-key="pk_live_51PWpqRCGNdcuWR3WDrjX7LfjkhCM50Q9suk9FanMQS0KGNcx0lLejdjYWmdYJe20eEHCJFmZRjVG5in5WoyK3Wdk00HuUhGLON"
+                >
+                </stripe-buy-button>
+            </div>
+            </div>
+        </div>
+
+        <hr class="my-12" />
+
+        <div class="product">
+            <h2 class="mt-20 text-4xl" id="xinxixue-rencai">
+            <span class="text-orange-600">信息学部</span>国自然人才类（优青/海优/杰青）中标标书
+            </h2>
+
+            <p>
+                优青、海优、杰青申请书格式类似，都是 <span class="text-orange-600">过往研究成果</span> 和
+                <span class="text-orange-600">拟开展的研究工作</span> 两部分，可以互相参考借鉴。
+            </p>
+
+            <figure class="not-prose mt-6">
+            <div class="mx-auto max-w-[420px]">
+                <img src="/assets/images/rencai.png" alt="rencai" class="w-full h-auto" loading="lazy" />
+                <figcaption class="mt-2 text-center text-sm text-slate-500">
+                人才类（优青，海外优青，杰青）中标标书。请点击下方按钮购买。
+                </figcaption>
+            </div>
+            </figure>
+
+            <div class="not-prose mt-4 flex justify-center">
+            <div style="width: 288px; margin: 1em auto">
+                <stripe-buy-button
+                buy-button-id="buy_btn_1RAl99CGNdcuWR3WHwGtrFk0"
+                publishable-key="pk_live_51PWpqRCGNdcuWR3WDrjX7LfjkhCM50Q9suk9FanMQS0KGNcx0lLejdjYWmdYJe20eEHCJFmZRjVG5in5WoyK3Wdk00HuUhGLON"
+                >
+                </stripe-buy-button>
+            </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <h3 class="mt-20 text-4xl" id="ai-guojiaji">人工智能相关国家级项目材料（申报书、答辩PPT）</h3>
+
+            <figure class="not-prose mt-6">
+                <div class="mx-auto max-w-5xl">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <!-- 第 1 张：独占一整行 -->
+                        <img
+                            src="/assets/images/AI-guojiaji-list.png"
+                            alt="rencai"
+                            class="w-full object-cover rounded sm:col-span-2"
+                            loading="lazy"
+                        />
+
+                        <!-- 第 2、3 张：并排 -->
+                        <img
+                            src="/assets/images/AI-guojiaji-proposals.png"
+                            alt="rencai"
+                            class="w-full aspect-[16/9] object-cover rounded"
+                            loading="lazy"
+                        />
+                        <img
+                            src="/assets/images/AI-guojiaji-ppt.png"
+                            alt="rencai"
+                            class="w-full aspect-[16/9] object-cover rounded"
+                            loading="lazy"
+                        />
+                    </div>
+                    <!-- <figcaption class="mt-3 text-center text-sm text-slate-500">
+                        人才类（优青，海外优青，杰青）中标标书。请点击下方按钮购买。
+                    </figcaption> -->
+                </div>
+            </figure>
+
+            <div class="not-prose mt-4 flex justify-center">
+            <div style="width: 288px; margin: 1em auto">
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1SwiNeCGNdcuWR3WmCmgIxkh"
+                    publishable-key="pk_live_51PWpqRCGNdcuWR3WDrjX7LfjkhCM50Q9suk9FanMQS0KGNcx0lLejdjYWmdYJe20eEHCJFmZRjVG5in5WoyK3Wdk00HuUhGLON"
+                    >
+                </stripe-buy-button>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="product"></h2>
+            <h3 class="mt-20 text-4xl" id="siqing-dabian">
+              四青人才答辩材料
+            </h3>
+
+            <figure class="not-prose mt-6">
+                <div class="mx-auto max-w-5xl">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <!-- 第 1 张：独占一整行 -->
+                        <img
+                            src="/assets/images/rencai-dabian-list.png"
+                            alt="rencai"
+                            class="w-full object-cover rounded sm:col-span-2"
+                            loading="lazy"
+                        />
+
+                        <!-- 第 2、3 张：并排 -->
+                        <img
+                            src="/assets/images/rencai-dabian-ppt.png"
+                            alt="rencai"
+                            class="w-full aspect-[16/9] object-cover rounded"
+                            loading="lazy"
+                        />
+                        <img
+                            src="/assets/images/rencai-dabian-pdf.png"
+                            alt="rencai"
+                            class="w-full aspect-[16/9] object-cover rounded"
+                            loading="lazy"
+                        />
+                    </div>
+                    <!-- <figcaption class="mt-3 text-center text-sm text-slate-500">
+                        人才类（优青，海外优青，杰青）中标标书。请点击下方按钮购买。
+                    </figcaption> -->
+                </div>
+            </figure>
+
+            <div class="not-prose mt-4 flex justify-center">
+            <div style="width: 288px; margin: 1em auto">
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1SwiReCGNdcuWR3WutMY9v2F"
+                    publishable-key="pk_live_51PWpqRCGNdcuWR3WDrjX7LfjkhCM50Q9suk9FanMQS0KGNcx0lLejdjYWmdYJe20eEHCJFmZRjVG5in5WoyK3Wdk00HuUhGLON"
+                    >
+                </stripe-buy-button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Disqus (optional) -->
+        <div class="not-prose mt-10">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "nsfc-latex";
+              this.page.identifier = "nsfc-latex";
+            };
+            (function () {
+              var d = document,
+                s = d.createElement("script");
+              s.src = "https://batchfy.disqus.com/embed.js";
+              s.setAttribute("data-timestamp", +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200">
+      <div class="mx-auto max-w-5xl px-4 py-8 text-center text-sm text-slate-600">
+        &copy; Made with ❤️ by <a class="hover:opacity-70" href="https://nsfc-latex.github.io">NSFC-LaTeX</a>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn?.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.toggle("hidden") === false; // now visible?
+        menuBtn.setAttribute("aria-expanded", String(isHidden));
+      });
+
+      // Close mobile menu after click
+      mobileMenu?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+      });
+
+      // Image modal (desktop only)
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeModal = document.getElementById("closeModal");
+      const images = document.querySelectorAll(".proposal-image");
+
+      function isDesktop() {
+        return window.innerWidth > 768;
+      }
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          if (!isDesktop()) return; // same as your original behavior
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          modalImg.src = img.getAttribute("src");
+          modal.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function hideModal() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modalImg.src = "";
+        modal.setAttribute("aria-hidden", "true");
+      }
+
+      closeModal?.addEventListener("click", hideModal);
+      modal?.addEventListener("click", (e) => {
+        if (e.target === modal) hideModal();
+      });
+
+      // Escape key close
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) hideModal();
+      });
+    </script>
+  </body>
+</html>

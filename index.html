@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>国家自然科学基金申请书 LaTeX 模板</title>
+    <meta name="description" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta name="keywords" content="国自然, 国家自然科学基金 LaTeX 模板,优青,海外优青,模板" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+
+    <!-- OpenGraph / Twitter -->
+    <meta property="og:title" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:description" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta property="og:url" content="https://nsfc-latex.github.io/" />
+    <meta property="og:site_name" content="国家自然科学基金申请书 LaTeX 模板" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="国家自然科学基金申请书 LaTeX 模板" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QP4ZJYDME9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QP4ZJYDME9');
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "description": "国家自然科学基金申请书 LaTeX 模板",
+        "headline": "国家自然科学基金申请书 LaTeX 模板",
+        "name": "国家自然科学基金申请书 LaTeX 模板",
+        "url": "https://nsfc-latex.github.io/"
+      }
+    </script>
+
+    <!-- TailwindCSS (CDN for lightweight single-page) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f4fff0",
+                100: "#e8ffdc",
+                200: "#c9ffb2",
+                300: "#9fff7a",
+                400: "#77B254",
+                500: "#4f9a2a",
+                600: "#3b7a1f",
+                700: "#2f5f1a",
+                800: "#274c18",
+                900: "#213f16"
+              }
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- Optional: Tailwind Typography for nice article styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.16/dist/typography.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- ========== Optional: Adsense (keep if you need it) ========== -->
+    <meta name="google-adsense-account" content="ca-pub-3120757781451274" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3120757781451274"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ========== Optional: Google Analytics (gtag) ========== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSFVE59S05"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SSFVE59S05");
+    </script>
+  </head>
+
+  <body class="bg-white text-slate-900">
+    <!-- Header / Nav (fixed) -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+        <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-400/15 text-brand-600">
+            La
+          </span>
+          <span class="hidden sm:inline">NSFC-LaTeX</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-5 text-sm">
+            <li><a class="hover:opacity-60 transition" href="/">LaTeX 模板</a></li>
+            <li><a class="hover:opacity-60 transition" href="#guide">使用说明</a></li>
+            <li><a class="hover:opacity-60 transition" href="#related">相关材料</a></li>
+            <li><a class="hover:opacity-60 transition" href="/resources">资源库</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuBtn"
+          class="md:hidden inline-flex items-center justify-center rounded-lg border border-slate-200 px-3 py-2 text-sm hover:bg-slate-50"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          菜单
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <nav class="mx-auto max-w-5xl px-4 py-3">
+          <ul class="flex flex-col gap-2 text-sm">
+            <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#latex-template">LaTeX 模板</a></li>
+            <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#guide">使用说明</a></li>
+            <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="#related">相关材料</a></li>
+            <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/resources">资源库</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="mx-auto max-w-5xl px-4 pt-24 pb-10">
+      <section class="prose prose-slate prose-lg max-w-none">
+        <div id="title" class="not-prose mb-6">
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">国家自然科学基金申请书 LaTeX 模板</h1>
+          <p class="mt-2 text-sm text-slate-600">
+            非官方模板 · 面向习惯使用 LaTeX 的研究人员 · 目标：排版尽可能贴近 Word 原模板
+          </p>
+        </div>
+
+        <div class="border-b border-brand-200 bg-brand-50 mb-20 mt-20">
+            <div class="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex items-start gap-2 text-sm text-slate-800">
+                <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-brand-400/20 text-brand-700">
+                    📌
+                </span>
+                <p class="leading-6 text-lg">
+                    <b class="text-brand-700">资源更新：</b>
+                    已整理大量国家自然科学基金 <b>青年/面上/<span style="color: #4F46E5;">长江</span>/<span style="color: #06B6D4;">青年长江</span>/<span style="color: #10B981;">优青</span>/<span style="color: #F59E0B;">海外优青</span>/<span style="color: #EF4444;">杰青</span> 中标标书，以及 <b>人才类答辩 PPT</b>。
+                    <a href="/resources" class="ml-1 font-semibold text-blue-600 hover:text-blue-700 hover:underline">
+                    点击 /resources 查看 →
+                    </a>
+                </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-2xl" id="免责声明">免责声明</h2>
+        <p>
+          本模板为 <b class="text-brand-500">非官方</b> 的国家自然科学基金 LaTeX 模板，旨在为习惯使用 LaTeX
+          的研究人员提供便利。平常使用 LaTeX 撰写学术论文的用户可以轻松地复用已发表论文中的图表参考文献等内容。
+        </p>
+
+        <p>
+          本模板经过精心排版，力求与原版 Word 模板高度一致。请注意，尽管已有多个成功申请案例使用了本模板，但我们无法对使用本模板的结果提供任何保证。
+        </p>
+
+        <p>
+          本模板依据
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">
+            署名—非商业性使用 4.0 国际 (CC BY-NC 4.0) 协议
+          </a>
+          开源，仅限于学术研究和教育等非商业用途，请勿用于商业目的。
+        </p>
+
+        <h2 id="latex-template">LaTeX 模板</h2>
+        <p>
+          请访问
+          <a href="https://github.com/nsfc-latex/nsfc-latex" target="_blank" rel="noopener noreferrer">
+            https://github.com/nsfc-latex/nsfc-latex
+          </a>
+          获取模板源代码。
+        </p>
+
+        <p>
+          也可以预览 PDF：
+          <a href="https://nsfc-latex.github.io/nsfc.pdf" target="_blank" rel="noopener noreferrer">
+            https://nsfc-latex.github.io/nsfc.pdf
+          </a>
+        </p>
+
+        <figure class="not-prose mt-5">
+          <div class="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+            <img src="/assets/images/nsfc.png" alt="Template Screenshot" class="w-full h-auto" loading="lazy" />
+          </div>
+          <figcaption class="mt-2 text-center text-sm text-slate-500">申请书模板样例</figcaption>
+        </figure>
+
+        <h2 id="latex-环境配置">LaTeX 环境配置</h2>
+        <p>
+          如果在本地编写，推荐使用
+          <a href="https://www.tug.org/texlive/" target="_blank" rel="noopener noreferrer">TeXlive</a>
+          +
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VSCode</a>
+          的组合，支持 MacOS、Windows 和 Linux 等多种平台，网上有很多相关教程，这里不再赘述。
+        </p>
+
+        <p>
+          如果是在线编辑，推荐使用
+          <a href="https://overleaf.com" target="_blank" rel="noopener noreferrer">https://overleaf.com</a>。
+        </p>
+
+        <!-- Optional: in-article Adsense block -->
+        <div class="not-prose my-6">
+          <ins
+            class="adsbygoogle"
+            style="display: block; text-align: center"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-3120757781451274"
+            data-ad-slot="3871741526"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+        <h2 id="guide" class="mt-10">模板使用说明</h2>
+        <p>
+          Coming soon, stay tuned：
+          <a href="https://github.com/nsfc-latex" target="_blank" rel="noopener noreferrer">https://github.com/nsfc-latex</a>。
+        </p>
+        <p>LaTeX</p>
+
+        <h2 id="related" class="mt-10">相关材料</h2>
+        <ul>
+          <li><a href="/assets/pdf/nsfc-guide2024.pdf">国家自然科学基金申请书撰写范例（2024版）</a></li>
+          <li><a href="/assets/pdf/201806596.pdf">撰写国家自然科学基金申请书的技巧及要点</a>，张策等</li>
+          <li>
+            <a href="/assets/pdf/3F5D1EDD93DC3D431EFB9DB925C_1153786C_351C3.pdf">申请国家自然科学基金：前期准备和项目申请书的撰写</a>，马臻
+          </li>
+        </ul>
+
+        <!-- Disqus (optional) -->
+        <div class="not-prose mt-10">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "nsfc-latex";
+              this.page.identifier = "nsfc-latex";
+            };
+            (function () {
+              var d = document,
+                s = d.createElement("script");
+              s.src = "https://batchfy.disqus.com/embed.js";
+              s.setAttribute("data-timestamp", +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200">
+      <div class="mx-auto max-w-5xl px-4 py-8 text-center text-sm text-slate-600">
+        &copy; Made with ❤️ by <a class="hover:opacity-70" href="https://nsfc-latex.github.io">NSFC-LaTeX</a>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn?.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.toggle("hidden") === false; // now visible?
+        menuBtn.setAttribute("aria-expanded", String(isHidden));
+      });
+
+      // Close mobile menu after click
+      mobileMenu?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+      });
+
+      // Image modal (desktop only)
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeModal = document.getElementById("closeModal");
+      const images = document.querySelectorAll(".proposal-image");
+
+      function isDesktop() {
+        return window.innerWidth > 768;
+      }
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          if (!isDesktop()) return; // same as your original behavior
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          modalImg.src = img.getAttribute("src");
+          modal.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function hideModal() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modalImg.src = "";
+        modal.setAttribute("aria-hidden", "true");
+      }
+
+      closeModal?.addEventListener("click", hideModal);
+      modal?.addEventListener("click", (e) => {
+        if (e.target === modal) hideModal();
+      });
+
+      // Escape key close
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) hideModal();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+html {
+scroll-padding-top: 72px;
+}
+.prose a {
+color: #2563eb;            /* tailwind blue-600 */
+text-decoration: none;
+font-weight: 500;
+}
+.prose a:hover {
+color: #1d4ed8;            /* tailwind blue-700 */
+text-decoration: underline;
+text-underline-offset: 3px;
+}
+.prose a:visited {
+color: #2563eb;            /* keep visited from turning purple */
+}
+.font-chinese-sans {
+font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.font-chinese-serif {
+font-family: "Source Han Serif SC", "Noto Serif CJK SC", "STSong", serif;
+}
+
+.font-chinese-mono {
+font-family: "Fira Code", "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.prose p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.product {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

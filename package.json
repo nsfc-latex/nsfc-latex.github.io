@@ -1,0 +1,23 @@
+{
+  "name": "nsfc-latex.github.io",
+  "version": "1.0.0",
+  "description": "<div style=\"text-align: center;\">\r     <img src=\"https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg\" alt=\"Description of SVG image\" style=\"width: 300px; max-width: 100%; height: auto;\">\r </div>",
+  "homepage": "https://github.com/nsfc-latex/nsfc-latex.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/nsfc-latex/nsfc-latex.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsfc-latex/nsfc-latex.github.io.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "serve": "^14.2.5"
+  }
+}
