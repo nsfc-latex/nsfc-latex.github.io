@@ -1,0 +1,19 @@
+title: 国家自然科学基金申请书 LaTeX 模板
+url: https://nsfc-latex.github.io
+theme: jekyll-theme-midnight
+
+github:
+    repository_url: https://github.com/nsfc-latex/nsfc-latex
+    zip_url: https://github.com/nsfc-latex/nsfc-latex/archive/refs/heads/main.zip
+
+repository: nsfc-latex/nsfc-latex.github.io
+github_username:  nsfc-latex
+
+plugins:
+    - jekyll-seo-tag
+
+lang: zh-CN
+favicon: "/assets/images/logo.png"
+
+analytics:
+    google: G-SSFVE59S05
